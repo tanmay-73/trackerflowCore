@@ -1,0 +1,130 @@
+<div class="login-bg-wrapper d-flex flex-column">
+        <div class="login-logo-header d-flex align-items-center">
+            <a href="#" class="login-logo-wrapper">
+                <img src="~/Interns_Project_Logo_2022/logo/Trackerflow.png"
+                     class="login-logo-img" alt="Tracker Flow" />
+            </a>
+        </div>
+        <div class="login-graphic-wrapper flex-1 overflow-auto d-flex flex-wrap">
+            <div class="login-left-wrapper">
+                <div>
+                    <img src="~/Interns_Project_Logo_2022/Project images/Tracker (1).png" alt="Tracker Flow"
+                         class="login-graphice-img" />
+                </div>
+            </div>
+            <div class="login-right-wrapper">
+                <div class="loginpage-box-wrapper">
+                    <h2 class="login-title text-dark font-bold">Sign In</h2>
+                    <div class="loginpage-box-content">
+                        <div class="form-group">
+                            <input type="Email" class="k-textbox login-textbox" placeholder="Email" id="loginEmail"
+                                   value=@ViewBag.email data-toggle="tooltip" data-placement="right" title="Please Enter Your Email ID">
+                            <!-- Validation Text-->
+                            <h5 id="emailCheck" style="color: #ff5a5a;"></h5>
+                            <span class="login-textbox-icon"><i class="icon-email"></i></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="k-textbox login-textbox" placeholder="Password" id="loginPassword"
+                                   value=@ViewBag.password data-toggle="tooltip" data-placement="right" title="Please Enter Your Password">
+                            <!-- Validation Text-->
+                            <h5 id="newpwdCheck" style="color: #ff5a5a;"></h5>
+                            <span class="login-textbox-icon"><i class="icon-locked"></i></span>
+                            <!-- Show/Hide Password-->
+                            <span class="login-textbox-icon" style="margin-left: 390px">
+                                <span class="fa fa-eye-slash icon" id="show_password"></span>
+                            </span>
+                        </div>
+                        <div class="login-input-check">
+                            <div class="login-input-checkbox">
+                                <input type='checkbox' class='k-checkbox' id='rememeberme'>
+                                <label class='k-checkbox-label' for='rememeberme'>Remember me</label>
+                            </div>
+                            <div class="login-input-checkbox">
+                                <input type='checkbox' class='k-checkbox' checked id='acceptTs'>
+                                <label class='k-checkbox-label' for='acceptTs'>
+                                    Accept end user License agreement<span class="text-danger" aria-hidden="true">*</span>
+                                </label>
+                                <!-- Validation Text-->
+                                <h5 id="chkCheck" style="color: #ff5a5a;"></h5>
+                            </div>
+                        </div>
+                        <div class="form-group pb-10">
+                            <button id="suc" class="btn btn-primary k-button w100 loginbtn" onclick="validateData()">Log In</button>
+                        </div>
+                        <div class="text-center">
+                            <button class="forgot-pwd btn-link-trans font-medium text-primary outline-dark"
+                                    aria-label="Forgot password" id="forgotpassword">
+                                Forgot Password ?
+                            </button><hr />
+                            <span class="text-dark font-medium">New to TrackerFlow ?</span> <a onclick="indexfun()"
+                                                                                               aria-label="Login"
+                                                                                               class="forgot-pwd btn-link-trans font-medium text-dark text-primary">Register here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <script>
+        //Register Redirection
+        function indexfun() {
+            window.location.href = UI_URL + "/sign/Index";
+        }
+        // Forgot password window jsot
+        $("#ForgotPasswordWindow").kendoWindow({
+            width: 450,
+            title: "Forgot Password",
+            visible: false,
+            draggable: false,
+            resizable: false,
+            actions: [
+                "Close"
+            ],
+            modal: true
+        }).data("kendoWindow");
+
+        $(document).on('click', '#forgotpassword', function () {
+            $("#ForgotPasswordWindow").data("kendoWindow").center().open();
+        });
+
+        //user is tabbing
+        function handleFirstTab(e) {
+            document.body.classList.add('user-is-tabbing');
+            document.removeEventListener('keyup', handleFirstTab);
+            document.addEventListener('mousedown', handleMouseDownOnce);
+        }
+
+        function handleMouseDownOnce() {
+            document.body.classList.remove('user-is-tabbing');
+            document.removeEventListener('mousedown', handleMouseDownOnce);
+            document.addEventListener('keyup', handleFirstTab);
+        }
+
+        window.addEventListener('keyup', handleFirstTab);
+
+        // Notification Alert js
+        function closenav() {
+            document.getElementById("msgSuccess").style.display = "none";
+            document.getElementById("msgWarning").style.display = "none";
+            document.getElementById("msgErrorr").style.display = "none";
+        }
+
+        // Password Show/Hide js
+        $(document).ready(function () {
+            $('#show_password').hover(function show() {
+                //Change the attribute to text
+                $('#loginPassword').attr('type', 'text');
+                $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+            },
+                function () {
+                    //Change the attribute back to password
+                    $('#loginPassword').attr('type', 'password');
+                    $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+                });
+            //CheckBox Show Password
+            $('#ShowPassword').click(function () {
+                $('#Password').attr('type', $(this).is(':checked') ? 'text' : 'password');
+            });
+        });
+
+    </script>

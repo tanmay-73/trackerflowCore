@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--meta tags-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>Clarent Institute Styleguide</title>
+    <!-- favicon -->
+    <!--<link rel="shortcut icon" href="../../App_Themes/Default/images/favicon.ico" type="image/x-icon">-->
+    <!--Kendo UI css order-->
+    <link href="../App_Themes/Default/css/kendo.common.min.css" rel="stylesheet" />
+    <link href="../App_Themes/Default/css/kendo.default.min.css" rel="stylesheet" />
+    <link href="../App_Themes/Default/css/fonts.css" rel="stylesheet" />
+    <link href="../App_Themes/Default/css/styleguide.css" rel="stylesheet" />
+    <link href="../App_Themes/Default/css/responsive.css" rel="stylesheet" />
+    <link id="Themes_mode" href="../App_Themes/Default/css/casepoint.comfortable.css" rel="stylesheet" />
+    <link id="Themes_colour" href="../App_Themes/Default/css/kendo.Yellow.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+<style type="text/css">
+        body {
+            color: #003145;
+        }
+
+        .styleguide-navbar {
+            width: 250px;
+            background: rgba(74, 136, 233, 0.15);
+        }
+
+        .logo-wrapper {
+            width: 140px;
+            height: 35px;
+            float: left;
+            text-align: left;
+            margin-right: 10px;
+        }
+
+        .styleguide-navbar.k-tabstrip-items .k-item .k-link {
+            padding: 10px;
+            display: block;
+            font-size: 18px;
+        }
+
+        .styleguide-content {
+            padding: 20px 30px !important;
+            height: 100%;
+            border: 0 !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+
+        .styleguide-tab-wrapper {
+            height: calc(100% - 89px);
+        }
+
+        .typography-text {
+            font-size: 30px;
+        }
+
+        .token.tag {
+            position: static;
+            padding: 0;
+            background: initial;
+        }
+
+        .color-bx {
+            margin: 0 10px;
+            width: 12.5%;
+        }
+
+        .color-bx-wrap {
+            height: 50px;
+            width: 100%;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .color-bx label {
+            margin-top: 10px;
+        }
+
+        .snippet {
+            position: relative;
+            overflow: visible;
+        }
+
+        pre {
+            margin-top: 0;
+            margin-bottom: 0;
+            white-space: nowrap;
+        }
+
+        .hljs {
+            display: block;
+            overflow-x: auto;
+            padding: .5em !important;
+            color: #333;
+            background: #f8f8f8;
+            -webkit-text-size-adjust: none;
+        }
+
+        .snippet .button-copy {
+            -webkit-transition: opacity .3s ease-in-out;
+            -o-transition: opacity .3s ease-in-out;
+            transition: opacity .3s ease-in-out;
+            opacity: 0;
+            padding: 2px 6px;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+
+        .snippet-tab-html .button-copy,
+        .snippet-tab-js .button-copy {
+            top: 10px;
+            right: 14px;
+        }
+
+        .button-copy {
+            position: relative;
+            display: inline-block;
+            padding: 6px 12px;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 20px;
+            color: #333;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            background-color: #eee;
+            background-image: linear-gradient(#fcfcfc, #eee);
+            border: 1px solid #d5d5d5;
+            border-radius: 3px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-appearance: none;
+        }
+
+        .snippet:hover .button-copy,
+        .snippet .button-copy:focus {
+            opacity: 1;
+        }
+
+        .clippy {
+            margin-top: -3px;
+            position: relative;
+            top: 3px;
+        }
+
+        .snippet code {
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 12px;
+            max-height: 250px;
+            white-space: pre-line !important;
+        }
+
+        .typography li,
+        .button-groups>div {
+            margin-bottom: 10px;
+        }
+
+        .box-border {
+            border: 1px solid #eee;
+            padding: 13px;
+        }
+
+        .notification-box {
+            position: relative;
+        }
+
+        .notification-alert {
+            display: block;
+        }
+
+        .bottom-block .theme-section,
+        .bottom-block .display-mode-section {
+            margin-top: 5px;
+            display: inline-block;
+        }
+
+        .bottom-block .theme-box:not(:last-child) {
+            margin-right: 8px;
+        }
+
+        .bottom-block .theme-color {
+            height: 100%;
+            width: 100%;
+            display: inline-block;
+            border-radius: 3px;
+            margin-right: 0;
+            text-align: center;
+            position: relative;
+            transition: 0.3s all ease-in-out;
+        }
+
+        .bottom-block .theme-color>i {
+            color: #fff;
+            font-size: 10px;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+        }
+
+        .icon-check:before {
+            content: "\eac3";
+        }
+
+        .bottom-block .theme-box {
+            height: 20px;
+            width: 20px;
+            float: left;
+            margin-bottom: 5px;
+        }
+
+        .bottom-block .k-checkbox-label:before {
+            border-radius: 100%;
+            height: 15px;
+            width: 15px;
+        }
+
+        .k-checkbox-label:before {
+            border-color: #dcdfe5;
+            height: 17px;
+            width: 17px;
+            border-radius: 3px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin-top: 0;
+            background: #fff;
+        }
+
+        .bottom-block .k-checkbox-label {
+            color: #ffffff !important;
+        }
+
+        .k-tabstrip-wrapper {
+            height: calc(100% - 89px);
+            overflow: hidden;
+        }
+
+        .employee-name {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 32px;
+            padding-left: 3px;
+        }
+
+        .bottom-block {
+            padding: 0;
+        }
+
+        .bottom-block .k-checkbox-label {
+            color: #003145 !important;
+        }
+
+        .bottom-block .display-mode-wrapper.dropdown>label {
+            font-weight: normal;
+            font-family: 'HK Grotesk SemiBold', sans-serif;
+            position: relative;
+            color: #003145;
+            display: inline-block;
+            top: unset;
+        }
+
+        .display-mode-wrapper>label {
+            font-size: 14px;
+            margin-bottom: 3px;
+            display: inline-block;
+            color: #003145;
+        }
+    </style>
+</head>
+<body>
+
+<div class="btn btn-danger"></div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".notification-alert").hide();
+    });
+</script>
+<div class="notification-alert success">
+<div class="pull-left"><i class="icon-check" aria-hidden="true"></i></div>
+<div class="pull-right" role="alert" aria-label="Success">
+<h5>Success!</h5>
+<p>The action has been performed successfully.</p>
+</div>
+<a href="javascript:void(0)" class="close btn-red-circle" aria-label="Close Notification" role="button"><i class="icon-cancel" aria-hidden="true"></i></a>
+</div>
+</body>

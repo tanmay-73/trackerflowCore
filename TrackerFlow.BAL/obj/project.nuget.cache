@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "v3plN2mm4weK7IiF3OsUgHjazxP4UoHDkeCznAX8J8WGMcmVkon3Awo86o7ze7VIqFT8cDfr74xVC+0qUaUKbA==",
+  "success": true,
+  "projectFilePath": "a:\\Projects\\TrackerFlow\\TrackerFlow\\TrackerFlow.BAL\\TrackerFlow.BAL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Tanmay\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Tanmay\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Tanmay\\.nuget\\packages\\npgsql\\7.0.1\\npgsql.7.0.1.nupkg.sha512",
+    "C:\\Users\\Tanmay\\.nuget\\packages\\rabbitmq.client\\6.4.0\\rabbitmq.client.6.4.0.nupkg.sha512",
+    "C:\\Users\\Tanmay\\.nuget\\packages\\servicestack.common\\6.5.0\\servicestack.common.6.5.0.nupkg.sha512",
+    "C:\\Users\\Tanmay\\.nuget\\packages\\servicestack.interfaces\\6.5.0\\servicestack.interfaces.6.5.0.nupkg.sha512",
+    "C:\\Users\\Tanmay\\.nuget\\packages\\servicestack.redis\\6.5.0\\servicestack.redis.6.5.0.nupkg.sha512",
+    "C:\\Users\\Tanmay\\.nuget\\packages\\servicestack.text\\6.5.0\\servicestack.text.6.5.0.nupkg.sha512",
+    "C:\\Users\\Tanmay\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "C:\\Users\\Tanmay\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\Tanmay\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\Tanmay\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}

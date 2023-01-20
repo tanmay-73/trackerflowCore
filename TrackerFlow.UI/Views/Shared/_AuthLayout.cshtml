@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--meta tags-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>TrackerFlow | Login</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="~/images/new_favicon.ico" type="image/x-icon">
+
+    <link href="~/css/kendo.common.min.css" rel="stylesheet" />
+    <link href="~/css/kendo.default.min.css" rel="stylesheet" />
+    <link href="~/css/fonts.css" rel="stylesheet" />
+    <link href="~/css/styleguide.css" rel="stylesheet" />
+    <link href="~/css/responsive.css" rel="stylesheet" />
+    <link href="~/css/casepoint.comfortable.css" rel="stylesheet" />
+    <link href="~/css/kendo.Yellow.css" rel="stylesheet" />
+    <link href="~/css/login.css" rel="stylesheet" />
+
+    <!-- Additional Scripts -->
+    <script src="~/js/jquery-1.10.2.min.js"></script>
+    <script src="~/js/NewScripts/2.Login.js"></script>
+
+    <!-- Additional CDN for Show/Hide Password -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+    <body>
+    <!--Forgot password window-->
+    <div class="forgotpassword-wrapper-window mt-login" id="ForgotPasswordWindow">
+        <div class="form-group mt-10">
+            <input type="text" class="mt-input" required id="txtemailsend">
+            <span class="mt-bar"></span>
+            <label class="mt-label">Email Address</label>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary k-button w100 loginbtn" aria-label="Forgot password" onclick="ExistEmail()" id="forgotpasswordbtn">
+                Send Request
+            </button>
+        </div>
+    </div>
+   
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+   <!--Notifications-->
+    <!--Success-->
+    <div class="notification-alert  notification-box success" id="msgSuccess">
+        <div class="pull-left"><i class="icon-check" aria-hidden="true"></i></div>
+        <div class="pull-right text-left" role="alert" aria-label="Success">
+            <h5>Successful</h5>
+            <p id="successMessage">Registration Successful.</p>
+        </div>
+        <a onclick="closenav()" class="close btn-red-circle" aria-label="Close Notification" role="button"><i class="icon-cancel" aria-hidden="true"></i></a>
+    </div>
+    <!--Warning-->
+    <div class="notification-alert notification-box warning" id="msgWarning">
+        <div class="pull-left"><i class="icon-warning" aria-hidden="true"></i></div>
+        <div class="pull-right text-left" role="alert" aria-label="warning">
+            <h5>Warning</h5>
+            <p id="warningMessage"></p>
+        </div>
+        <a href="javascript:void(0)" onclick="closenav()" class="close btn-red-circle" aria-label="Close Notification" role="button"><i class="icon-cancel" aria-hidden="true"></i></a>
+    </div>
+    <!--Error-->
+    <div class="notification-alert notification-box danger" id="msgErrorr">
+        <div class="pull-left"><i class="icon-cancel" aria-hidden="true"></i></div>
+        <div class="pull-right" role="alert" aria-label="danger">
+            <h5>Error</h5>
+            <p id="errorMessage"></p>
+        </div>
+        <a href="javascript:void(0)" onclick="closenav()" class="close btn-red-circle" aria-label="Close Notification" role="button"><i class="icon-cancel" aria-hidden="true"></i></a>
+    </div>
+</body>
+    <script src="~/js/Kendo/jquery.min.js"></script>
+    <script src="~/js/Kendo/kendo.all.min.js"></script>
+    
